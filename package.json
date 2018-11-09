@@ -5,13 +5,18 @@
   "dependencies": {
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
+    "react-redux": "^5.1.0",
     "react-scripts": "2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "build-css": "lessc src/style/index.less src/index.css",
+    "watch-css": "npm run build-css && grunt"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +26,15 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@storybook/addon-actions": "^4.0.4",
+    "@storybook/addon-links": "^4.0.4",
+    "@storybook/addon-storyshots": "^4.0.4",
+    "@storybook/addons": "^4.0.4",
+    "@storybook/react": "^4.0.4",
+    "babel-loader": "^8.0.4",
+    "react-test-renderer": "^16.6.1"
+  }
 }
